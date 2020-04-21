@@ -1,0 +1,16 @@
+package ${packagebase}.expose;
+
+import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Mono;
+
+@RestController
+@RequestMapping("/api/demo")
+@CrossOrigin
+public class ${servicename}Controller {
+
+    @GetMapping("/hello")
+    public Mono<String> hello() {
+        return Mono.just("Hello Word");
+    }
+
+}

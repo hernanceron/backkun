@@ -1,0 +1,19 @@
+group = '${packagebase}'
+version = '1.0.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    compile group: 'com.pacifico.kuntur', name : 'core', version: '0.0.1-SNAPSHOT'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.2.4.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-webflux', version: '2.2.4.RELEASE'
+
+}

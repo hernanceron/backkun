@@ -1,0 +1,14 @@
+package ${packagebase}.${resourcename?lower_case}.business;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+import ${packagebase}.${resourcename?lower_case}.model.api.${resourcename};
+
+public interface ${resourcename}Service {
+
+    Flux<${resourcename}> get${resourcename}();
+
+    Mono<${resourcename}> get${resourcename}(Long id);
+}

@@ -1,0 +1,16 @@
+package ${packagebase};
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
+
+import com.pacifico.kuntur.core.starter.web.runner.StarterWebApplication;
+
+@SpringBootApplication
+public class ${servicename}Application extends StarterWebApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(${servicename}Application.class, args);
+	}
+
+}

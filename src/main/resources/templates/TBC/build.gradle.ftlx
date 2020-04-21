@@ -1,0 +1,37 @@
+plugins {
+    id 'org.springframework.boot' version '2.2.4.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'java'
+}
+
+group = '${packagebase}'
+version = '1.0.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.8
+
+configurations {
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+
+
+dependencies {
+    compile group: 'com.pacifico.kuntur', name : 'core', version: '0.0.1-SNAPSHOT'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.2.4.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-webflux', version: '2.2.4.RELEASE'
+
+}

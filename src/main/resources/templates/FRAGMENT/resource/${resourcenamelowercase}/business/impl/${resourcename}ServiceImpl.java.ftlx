@@ -1,0 +1,30 @@
+package ${packagebase}.${resourcename?lower_case}.business.impl;
+
+
+import ${packagebase}.${resourcename?lower_case}.business.${resourcename}Service;
+import ${packagebase}.${resourcename?lower_case}.config.${resourcename}Config;
+import ${packagebase}.${resourcename?lower_case}.model.api.${resourcename};
+
+import org.springframework.beans.factory.annotation.Autowired;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+
+@Service
+@Slf4j
+public class ${resourcename}ServiceImpl implements ${resourcename}Service {
+
+  @Autowired
+  private ${resourcename}Config ${resourcename?lower_case}Config;
+
+    public Flux<${resourcename}> get${resourcename}(){
+        return Flux.error(new UnsupportedOperationException("must be implemented"));
+    }
+
+    public Mono<${resourcename}> get${resourcename}(Long id){
+        return Mono.error(new UnsupportedOperationException("must be implemented"));
+    }
+
+}

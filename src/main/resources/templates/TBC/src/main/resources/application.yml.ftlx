@@ -1,0 +1,13 @@
+server:
+  port: 9091
+spring:
+  application:
+    name: ${application_name}-${api_version}
+  main:
+    allow-bean-definition-overriding: true
+
+info:
+  project:
+    version: ${mavenversion}
+    title: ${mavenname}.
+    description: ${mavendescription}
